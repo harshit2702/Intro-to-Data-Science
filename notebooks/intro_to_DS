@@ -1,0 +1,72 @@
+name = 'James'
+number = 30
+print('My name is {} and my number is {}'.format(name, number))
+
+#Placeholders
+name = 'James'
+number = 30
+print('My name is {one} and my number is {two}, {one} again and {two} again'
+      .format(one=name, two=number))
+#List
+ # nested list: nesting a list with in a list
+nested_1 = [1,2,3,[4,5,6]]
+print("List : {}".format(nested_1))
+
+# grabbing the nested list - count the index location of nested list starting with 0
+print("Nested List : {}".format(nested_1[3]))
+
+# grabbing element from the nested list
+print("Element from nested list : {}".format(nested_1[3][0]))
+
+ # another example of nested list
+nested_2 = [1,2,[3,4,['a','b']]]
+print("List : {}".format(nested_2))
+
+# grabbing the nested list - count the index location of nested list starting with 0
+print("Nested List : {}".format(nested_2[2]))
+
+# grabbing 'a' from nested_2
+print("Element from nested list : {}".format(nested_2[2][2][0]))
+
+#Dictionary
+nested_d = {'k1':{'k_in':[1,2,3]}}
+# Printing dictionary
+print("Dictionary : {}".format(nested_d))
+
+# Printing the nested dictionary
+print("Nested dictionary : {}".format(nested_d['k1']))
+
+# Printing value from nested dictionary
+print("Value from nested dictionary : {}".format(nested_d['k1']['k_in']))
+
+ # We have a dictionary
+d1 = {'key1':'value1','key2':'value2', 'key3':'value3'}
+
+# Grabbing all the keys. 
+print("Keys of dictionary : {}".format(d1.keys())) #try "list(d1.keys())"
+
+# Grabbing all the values
+print("Values of dictionary : {}".format(d1.values()))
+
+# Grabbing all key-value pairs
+print("Key-Value pairs of dictionary : {}".format(d1.items()))
+
+#Lambda and map
+
+my_list = [1,2,3,4,5]
+# casting to the list to get the result back
+my_new_list = list(map(lambda num:num**2, my_list)) 
+print(my_new_list)
+
+a = [1,2,3,4]
+b = [17,12,11,10]
+c = [-1,-4,5,9]
+#list(map(lambda a, b, c : a + b + c, a, b, c))
+my_list = list(map(lambda x, y, z : x + y + z, a, b, c)) 
+print(my_list)
+
+#filter
+# "we’re using the range function here!"
+print( list(filter(lambda num: num % 2 == 0, range(1,10))) )
+# casting to the list to get ,the result back
+
